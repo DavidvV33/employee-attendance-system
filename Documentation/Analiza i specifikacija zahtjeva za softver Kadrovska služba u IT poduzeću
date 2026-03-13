@@ -1,0 +1,243 @@
+# Analiza i specifikacija zahtjeva za softver Kadrovska služba u IT poduzeću
+## 1. Uvod
+### 1.1 Svrha
+U ovome dokumentu nalaze se detaljne specifikacije softverskih zahtjeva za softver koji će se koristit u svrhu evidentiranja prisustva i odsustva zaposlenika na radnom mjestu. Dokument je namijenjen svom osoblju koje će raditi na realizaciji samog projekta. U to su uključeni menadžeri timova koji će postavljati smjernice članovima tima, te dizajneri i programeri koji će se pobrinuti za implementaciju, testiranje i izgled softvera. Svaki član tima koji radi na projektu dužan je dokumentaciju u potpunosti s razumijevanjem pročitati te razumjeti sve dijelove kako bi se projekt što kvalitetnije mogao izrealizirati. Također, dokument služi kako bi se što jasnije predočilo što sve buduće rješenje mora sadržavati kako bi se ispoštovali svi zahtjevi kupca. Svi dijelovi ovoga dokumenta kao cjelina moraju stvoriti kompletnu sliku kako bi softver morao biti implementiran.
+### 1.2 Opseg
+Jedna od zadaća odjela za ljudske resurse vođenje je evidencije o odsutnosti radnika iz tvrtke. Tvrtka koja će koristiti proizvod je srednje veliko IT poduzeće s do 250 zaposlenih djelatnika. Novo softversko rješenje za ovaj problem omogućiti će HR odjelu brže i efikasnije vođenje evidencije. Svakom djelatniku tvrtke se pomoću novog sustava mora omogućiti stvaranje zahtjeva za odsustvo iz tvrtke. Postoji više kadrovskih zahtjeva koji su navedeni u Tablici 1. 
+
+![Screenshot_5](https://user-images.githubusercontent.com/126589819/226177633-362b48db-3537-474c-b10d-5b8e4b90da0c.png)
+
+**_Tablica 1 Vrste kadrovskih zahtjeva_**
+
+Djelatnici su u mogućnosti predati zahtjev tokom cijele godine uzimajući u obzir broj dana na koje imaju pravo. Prava na slobodne dane su određena zakonskim minimumom, radnim stažom, socijalnim uvjetima, težini posla i slično. Djelatnik može kreirati zahtjev u kojem traži slobodan dan na poslu na koji ima pravo radi odrađenih prekovremenih sati, a koji se zbrajaju i pretvaraju u slobodne dane. Najavljeno službeno putovanje može trajati od minimalno 1 dana pa na više. Svaki IT djelatnik ima pravo na stručno usavršavanje na konferencijama, skupovima i različitim drugim sastancima koji su prethodno dogovoreni s upravom poduzeća. Trajanje stručnog usavršavanja ovisi o vrsti usavršavanja, a može trajati od nekoliko dana do nekoliko mjeseci. U slučaju bolesti, djelatnik ima pravo na bolovanje koje se također prijavljuje kroz sustav te potom evidentira.
+
+Djelatnici se prijavljuju u novi sustav te putem forme za kreiranje novog zahtjeva isti ondje i pohranjuju. Prema novom rješenju, zahtjeve koji su predani u sustav pregledava menadžer tima te odlučuje o njihovom statusu. Mogući statusi zahtjeva navedeni su u Tablici 2. 
+
+![Screenshot_4](https://user-images.githubusercontent.com/126589819/226177572-c08e3a8a-defc-4aba-86bc-41e7f592d320.png) 
+
+**_Tablica 2 Opis statusa zahtjeva_**
+
+Prilikom kreiranja zahtjeva, on poprima status "Zaprimljen". Ukoliko menadžer odluči uvažiti zahtjev, on poprima status "Odobren". Ukoliko menadžer ne uvaži zahtjev, on poprima status "Odbijen". Odluku o određenom zahtjevu menadžer prosljeđuje odjelu za ljudske resurse koji na taj način prati odsustvo radnika. Bolovanje je zahtjev koji se vodi kroz evidenciju radi praćenja odsustva, ali se ne odobrava od strane menadžera. Za ovo softversko rješenje predlaže se naziv Employee Attendance System – ESA, a radi se o potpuno novom rješenju za problem evidencije. Softver će sadržavati funkcije potrebne za rad s predanim zahtjevima u svrhu evidentiranja. Važna je činjenica da softver neće omogućiti radnicima izmjenu već predanih zahtjeva, kao što je na primjer naknadna promjena datuma ili razloga odsustva. Očekuje se da će softver doprinijeti kvaliteti i brzini evidentiranja radnika.
+
+### 1.3 Definicije, akronimi i skraćenice
+**_Zahtjev_** - Svaka forma koju zaposlenik popunjava i pohranjuje u sustav u svrhu odobrenja odsustva iz poduzeća
+
+_**Korisnik sustava**_ - Svaka član osoblja koji ima pristup sustavu, bilo u ulozi _zaposlenik_ ili _menadžer_
+
+_**Korisnička uloga**_ - Svakome zaposleniku dodijeljena je određena uloga u sustavu prema svojoj funkciji u poduzeću. Svaka uloga ima određen skup aktivnosti koje može obavljati, a koje su unaprijed definirane
+
+_**Zaposlenik**_ - Svi članovi tima koji ispunjavaju određene zadatke u svrhu finaliziranja projekta
+
+_**Menadžer**_ - Voditelj tima koji upravlja poslovima koje pojedini članovi tima obavljaju
+
+_**Evidencija zaposlenika**_ - Popis svog dostupnog osoblja u poduzeću
+
+_**HR**_ – Human Resources (odnosi se na odjel za upravljanje ljudskim resursima)
+
+_**EAS**_ – Employee Attendance System – Sustav za evidenciju prisustva radnika u tvrtki (naziv novog softverskog rješenja)
+
+_**Funkcionalnosti sustava**_ - Mogućnosti i značajke koje sustav nudi korisniku kako bi mogao izvršiti određene zadatke. Preciznije, to su akcije koje se mogu obavljati unutar sustava.
+
+### 1.4 Reference
+1.	“830-1998 - IEEE Recommended Practice for Software Requirements Specifications.” IEEE, 1998. [Online].Dostupno na poveznici: http://ieeexplore.ieee.org/servlet/opac?punumber=5841
+2.	Dokument opisa problema, dostupan na poveznici https://elf.foi.hr/pluginfile.php/202474/mod_resource/content/7/Zadatak%20-%20Kadrovska.pdf
+3.	Dokument 2.1 Strukturiranje specifikacije zahtjeva
+4.	Dokument INCOSE karakteristike zahtjeva
+
+### 1.5 Struktura dokumenta
+U 2. cjelini ovog dokumenta opisuje se perspektiva proizvoda, odnosno njegova povezanost i odnos s drugim sustavima. Definirano je hoće li sustav biti neovisan i potpuno samostalana ili je pak dio nekog većeg sustava. Definirane su glavne funkcije koje proizvod mora sadržavati kako bi zadovoljio sve zahtjeve. Prema njima će se kasnije definirati funkcionalni zahtjevi softvera. Opisane su karakteristike korisnika koji će imati pristup sustavu te na koji način će ga moći koristiti. Dana su i ograničenja koja mogu utjecati na sam proces razvoja novog softvera te pretpostavke koje se pdnose na korištenje i performanse softvera u budućnosti.
+
+U 3. cjelini detaljno se obrađuju funkcionalni zahtjevi novog rješenja. Funckionalni zahtjevi koji se detaljno obrađuju u ovoj cjelini proizlaze iz prethodno definiranih funkcija proizvoda. Ovaj dio primarno se odnosi na osoblje koje će voditi brigu o implementaciji navedenih funkcionalnosti. Pisano je razinom detaljnosti kako bi nakon pročitanog funkcionalnog zahtjeva bilo potpuno jasno što softver mora sadržavati. Navodi se i koje će funkcionalnosti biti dostupne u početnoj verziji EAS softvera.
+
+U 4. cjelini definiraju se nefunkcionalni zahtjevi softvera prema kojima on mora biti realiziran. Oni predstavljaju ograničenja koja se odnose na softver u cjelini, te utječu na cjelokupnu arhitekturu sustava. Određuje se izgled softvera te upotrebljivost. Za navedene nefunkcionalne zahtjeve dane su metrike po kojima se može odrediti u kojoj mjeri su oni ostvareni.
+
+U 5. cjelini prikazano je grafičko korisničko sučelje EAS-a, odnosno kako će sustav izgledati za vrijeme interakcije s korisnikom. Prikazane su mogućnosti karakteristične za svaku ulogu koju sustav omogućava, odnosno koje funkcionalnosti su dostupne u kojoj korisničkoj ulozi. Iz skica sustava vidljivo je na koji način su određene funkcionalnosti povezane u smislenu cjelinu.
+
+## 2. Općeniti opis
+### 2.1 Perspektiva proizvoda
+Novo EAS rješenje potpuno je samostalno, a pomoću njega tvrtka započinje voditi evidenciju na drugačiji način, koji predstavlja poboljšanje u odnosu na prethodni. EAS nije predviđen kao dio nekog većeg sustava, već funkcionira samostalno. Kako bi se sve funkcionalnosti pravilno izvodile, od korisnika će se zahtijevati instaliranje EAS klijenta koji će se izvršavati na njegovom računalu. Sam klijent nije zamišljen da bude zahtjevan te da troši puno resursa računala, već kao jednostavan i lako upotrebljiv sustav koji bi svatko u tvrtki mogao koristiti bez obzira na performanse računala. S obzirom da je potrebno evidentirati svakog zaposlenika tvrtke u sustav kako bi se mogao prijaviti pomoću svojih korisničkih podataka, potreban je uvoz podataka o zaposlenicima iz baze podataka koju tvrtka posjeduje. Ovu operaciju administratori tvrtke moraju izvesti na samom početku korištenja, odnosno čim tvrtka prijeđe na novi sustav.Osim toga, EAS nije u interakciji s nikakvim drugim sustavom. Za korištenje EAS-a neće biti potrebno koristiti hardver ili komunikacijske tehnologije.
+
+### 2.2 Funkcije proizvoda
+* Prijava zaposlenika u sustav pomoću jedinstvenog korisničkog imena i lozinke
+
+Svakom zaposleniku unaprijed se dodjeljuje uloga u sustavu prema njegovoj funkciji u poduzeću. Prijava u sustav moguća je pomoću jedinstvenih korisničkih podataka koji se sastoje od službene e-mail adrese te lozinke. Nakon prijave u sustav, korisnik ima mogućnosti koje su mu dodijeljene prema ulozi u sustavu. Pristup sustavu i podacima koji se ondje nalaze mora biti moguć samo osoblju tvrtke.
+
+* Pregled svih predanih zahtjeva u sustav
+
+Svaki korisnik koji se prijavi u sustav ima mogućnost pregleda zahtjeva, no treba napomenuti kako ta mogućnost ovisi o korisničkoj ulozi. Korisnik u ulozi _zaposlenik_ ima mogućnost pregledati samo vlastite, trenutne, te prethodno obrađene zahtjeve. Ostali zaposlenici (osim menadžera), nemaju uvid u zahtjeve koje su kreirali drugi zaposlenici. Korisnik u ulozi _menadžer _ ima mogućnost pregleda svih zahtjeva koji se nalaze u sustavu.
+
+* Stvaranje novih zahtjeva
+
+Svaki zaposlenik prilikom prijave u sustav ima mogućnost kreiranja novog zahtjeva kojim će najaviti odustvo iz tvrtke. Zahtjev se kreira na način da se ispunjava forma, u kojoj su obavezna polja razlog odsustva i predviđeni datum odsustva. Zahjev se zatim pohranjuje u sustav te poprima status "Zaprimljen" sve dok menadžer ne donese novu odluku o njegovom statusu. 
+
+
+* Odabir vrste kadrovskog zahtjeva
+
+Prilikom popunjavanja zahtjeva za odsustvo, zaposlenici imaju na raspolaganju pet opcija koje su opisane u tablici **_Vrste kadrovskih zahtjeva_**. Iznimka od ostalih kadrovskih zahtjeva je bolovanje. Ono se vodi kroz evidenciju radi praćenja odsustva, ali se ne odobrava od strane menadžera.
+
+* Promjena statusa zahtjeva
+
+Svaki korisnik u ulozi _menadžer _, uz mogućnost pregleda svih zahtjeva, ima i mogućnost donošenja odluka o promjeni njihovih statusa. Ukoliko menadžer odobri neki zahtjev za odsustvo, u sustavu ima mogućnost promjene tog statusa na "Odobren". U slučaju da menadžer ne odobrava zahtjev za odsustvo, njegov status postavlja na "odbijen".
+
+* Slanje obavijesti o statusu zahtjeva
+
+Prilikom promjene statusa zahtjeva, menadžer ima mogućnost slanja obavijesti zaposleniku. Zaposlenik obavijest dobiva u obliku e-maila koji ga obavještava kako je njegov zahtjev obrađen, odnosno kako je dobio novi status. Zaposlenik potom prilikom prijave u sustva može vidjeti novi, izmjenjen status zahtjeva.
+
+* Slanje izvještaja o statusima zahtjeva odjelu ljudskih resursa
+
+Nakon što je menadžer obradio određeni broj zahtjeva, potrebno je poslati izvještaj HR odjelu. Izvještaj o zahtjevima se šalje kako bi se evidencija zaposlenika mogla voditi ispravno, odnosno kako bi se točno znalo koji zaposlenik neće ili hoće biti dostupan u određenom razdoblju.
+
+### 2.3 Karakteristike korisnika
+Novo softversko rješenje podržavati će dvije grupe korisnika. Prvu grupu predstavljaju zaposlenici koji će stvarati zahtjeve u sustavu, oni se mogu svrstati u korisničku ulogu zaposlenik. Sljedeću grupu predstavljaju menadžeri timova koji odlučuju o statusu zahtjeva i prosljeđuju ga HR odjelu, oni se mogu svrstati u korisničku ulogu menadžer. Korisnici s ulogom menadžer u sustavu imaju veće ovlasti s obzirom da se oni nalaze na nadređenoj poziciji u odnosu na ostale članove timova. Svaki zaposlenik sustav će koristiti po potrebi, odnosno u trenutku kada odluči da želi iskoristiti godišnji odmor, uzeti slobodan dan i slično. Za sve korisnike sustava podrazumijeva se da imaju dovoljno informatičkog i tehničkog znanja kako bi mogli koristiti sustav bez poteškoća.
+
+### 2.4 Ograničenja
+Employee Attendance System u svojem radu koristi podatke o zaposlenim osobama tvrtke, koji su podložni GDPR odredbama. Iz tog razloga potrebno se pobrinuti o sigurnosti svih podataka koji su u upotrebi na način da samo osoblje tvrtke ima pristup EAS-u. Važno je da spomenuti podaci ne dospiju izvan EAS-a ali i ostalih sustava koji se koriste unutar tvrtke. Hardverska ograničenja nisu prisutna iz razloga jer je novi sustav zamišljen kao klijent na korisničkom računalu koji neće biti zahtjevan za pokretanje i korištenje, te neće biti potrebne nikakve druge prilagodbe.Ne postoje nikakva druga softverska ograničenje koja mogu utjecati na razvoj softvera.
+
+### 2.5 Pretpostavke i ovisnost
+Svi kadrovski zahtjevi navedeni u Tablici 1 zajedno s njihovim opisima su stalni te se ne očekuje izmjena postojećih ili dodavanje novih zahtjeva u budućnosti. Iz toga proizlazi kako softveru neće biti potrebna dodatna ažuriranja kojima bi se pokrile evenutalne nove promjene. Isto vrijedi i za opise statusa zahtjeva koji mogu biti "Zaprimljen", "Odobren" ili "Odbijen". Razloga za promjenu u statusima zahtjeva nema jer je svi trenutni statusi su dovoljno jednostavni i zadovoljavaju sve potrebe tvrtke. Bilo kakvim dodatnim promjenama ili dodavanjem novih statusa riskira se pojava nepotrebnih komplikacija i problema oko interpretacije njihova značenja. Za vrijeme izrade i uporabe EAS-a ne očekuju se nikakve značajne promjene koje mogu utjecati na njegove funkcionalnosti.
+
+## 3. Funkcionalni zahtjevi
+### FZ-1
+Identifikator | FZ-1
+-|-
+Zahtjev | Sustav će omogućiti pristup funkcionalnostima isključivo osoblju tvrtke
+Obrazloženje | Pristup podacima isključivo osoblju tvrtke implementira se iz sigurnosnih razloga i zaštite privatnih podataka zaposlenika tvrtke. Na taj način pokušava se spriječiti probijanje privatnih informacija u javnost, koje mogu negativno utjecati na poslovanje tvrtke. Ograničavanje pristupa spriječiti će upad neovlaštenih osoba u sustav i osigurati da se informacije ne mogu koristiti u nedozvoljene svrhe. Zaposlenici koji imaju pristup sustavu koristiti će njegove funkcionalnosti na ispravan način, za ono za što su namijenjene. Važno je naglasiti pravilno korištenje kako ne bi došlo do potencijalnih poteškoća s uporabom funkcionalnosti sustava. Svaki korisnik prijavljuje se u sustav pomoću službene e-mail adrese i lozinke jedinstvene za svakog od njih. Nakon prijave u sustav, korisnik dobiva pristup mogućnostima koje su definirane prema korisničkim ulogama. Svaka korisnička uloga ima svoj specifične funkcionalnosti. Pritiskom na gumb _"Prijavi se"_, korisniku se otvara sučelje preko kojeg nastavlja daljni rad. Postoji posebno sučelje kojim korisnik u ulozi _Zaposlenik_ pristupa funkcionalnostima te posebno sučelje za korisnike u ulozi _menadžer_.
+Način provjere | Nakon što korisnik unese ispravne podatke za prijavu, sustav mu mora omogućiti pristup funkcionalnostima koje odgovaraju njegovoj razini prava.
+Prioritet [1-5] | 1
+Izvor/Porijeklo | Nastavnici na kolegiju
+
+![Screenshot_6](https://user-images.githubusercontent.com/126589819/226181864-52fdfd3d-9958-40d1-8fdb-babb6977add0.png)
+
+
+### FZ-2
+Identifikator | FZ-2
+-|-
+Zahtjev | Sustav će omogućiti kreiranje novog zahtjeva
+Obrazloženje | Sustav omogućava zaposlenicima stvaranje novog zahtjeva za opravdano odsustvo s radnog mjesta u tvrtki. Zahtjevi se mogu kreirati u bilo kojem trenutku tokom godine, ovisno o potrebama koje imaju korisnici. Postoji više vrsta kadrovskih zahtjeva koje korisnici mogu odabrati prilikom kreiranja koje su navedene u Tablici 1. Prilikom kreiranja pojedinog zahtjeva, od korisnika se obavezno zahtijeva specificiranje razloga odsustva uz navođenje planiranog vremena u kojemu planira biti odsutan. Obje opcije imaju unaprijed ponuđene vrijednosti koje su prethodno definirane za to mjesto. Svaki predani zahtjev ostaje trajno pohranjen u sustavu i vidljiv je menadžerima u svakom trenutku. Svaki zahtjev sadrži redni broj koji se generira automatski od strane sustava, ime i prezime zaposlenika koji je podnio zahtjev, vrijeme kreiranja zahtjeva, razlog odsustva, odgovorna osoba za kontrolu zahtjeva, planirano vremensko razdoblje odsustva te trenutni status zahtjeva. Korisnik u svakom trenutku ima mogućnost pregleda statusa vlastitog zahtjeva te pregled svhi ostalih zahtjeva koje je kreirao, ali nema uvid u zahtjeve koje su predali ostali korisnici.
+Način provjere | Prilikom korištenja ove funkcionalnosti korisniku se mora otvoriti obrazac u koji je moguće unijeti potrebne podatke koji su prethodno određeni. Nakon što su svi potrebni podaci ispravno uneseni, prilikom pritiska na gumb, zahtjev u obliku obrasca se mora pohraniti u sustav zajedno s popunjenim podacima. Mora biti vidljiv u svakom trenutku.
+Prioritet [1-5] | 1
+Izvor/Porijeklo | Nastavnici na kolegiju
+
+![Screenshot_7](https://user-images.githubusercontent.com/126589819/226181958-dec03cd3-88d6-4f5b-89ec-da9840059def.png)
+
+
+### FZ-3
+Identifikator | IT poduzeće
+-|-
+Zahtjev | Sustav će omogućiti prikaz svih kreiranih zahtjeva
+Obrazloženje | Korisnik u svakome trenutku može vidjeti sve zahtjeve koje je kreirao u prošlosti te zahtjeve koji su trenutno u obradi. Oni su vidljivi jedino njemu i menadžeru koji ima veće ovlasti u sustavu. Moguće je aktivno pratiti trenutni status određenog zahtjeva te promjene ukoliko se one dogode. Pregled prethodnih zahtjeva omogućava korisniku kvalitetnije donošenja odluka o odabiru vremenskog razdoblja izostanka. Prema svakome kreiranom zahtjevu u prošlosti može se utvrditi koja su vremenska razdoblja u kojima zaposlenici prijavljuju najveći broj odsustava. Podaci dobiveni iz analize svih zahtjeva pomažu u budućem planiranju i raspoređivanju ljudskih resursa tvrtke. Važno je naglasiti da pristup statistici i pregledu svih zahtjeva ima samo menadžer, te ih on po potrebi može korisiti u svrhu unaprjeđenja poslovnih procesa.
+Način provjere | Nakon pristupanja kategoriji za prikaz trenutnih ili prethodno kreiranih zahtjeva putem odgovarajućeg sučelja, korisniku se moraju prikazati svi navedeni zahtjevi iz odgovarajuće kategorije. Za svaki zahtjev, prilikom otvaranja njegovih detalja, moraju se prikazati i podaci koje sadrži.
+Prioritet [1-5] | 1
+Izvor/Porijeko | Nastavnici na kolegiju
+
+![Screenshot_9](https://user-images.githubusercontent.com/126589819/226182023-644bce09-6535-4525-9aa9-95de3aaedbcf.png)
+
+### FZ-4
+Identifikator | FZ-4
+-|-
+Zahtjev | Sustav će omogućiti odabir jednog od ponuđenih kadrovskih zahtjeva iz padajućeg izbornika
+Obrazloženje | Prilikom kreiranja zahtjeva svaki korisnik dužan je navesti razlog odsustva. Sustav će mu omogućiti odabir jednog od kadrovskih zahtjeva iz padajućeg izbornika. Pritiskom na gumb, otvara se padajući izbornik iz kojeg korisnik bira jednu od ponuđenih opcija. Vrste kadrovskih zahtjeva unaprijed su definirane kako korisnik taj podatak ne bi morao ručno unositi, što bi moglo stvarati nepotrebne poteškoće u provjeri pojedinog zahtjeva. Padajući izbornik koristi se radi jednostavnosti i lakoće specificiranja razloga odsustva prilikom ispunjavanja zahtjeva. Drugi načini realizacije odabira kao što su ručni unos ili pretraga drugih dijelova sustava mogli bi biti sporiji i lošije implementirani u odnosu na padajući izbornik. Smatra se kako dodatne modifikacije ovog načina prikaza neće biti potrebne, s obzirom da na jednostavan i efikasan način omogućava korisniku odabir ispravne vrijednosti. Moguća su jedino poboljšana u smislu optimiziranosti i poboljšanja korisničkog iskustva.
+Način provjere | Prilikom otvaranja padajućeg izbornika u polju gdje se navodi razlog odsustva, korisniku se mora ponuditi odabir svih kadrovskih zahtjeva koji su prethodno definirani. Podatak se mora pravilno unijeti i evidentirati u sustav zajedno s ostalim podacima koje zahtjev sadrži.
+Prioritet [1-5] | 3
+Izvor/Porijeko | Nastavnici na kolegiju
+
+![Screenshot_14](https://user-images.githubusercontent.com/126589819/226688075-a37ca18c-ad87-4d1b-8e2f-aca5f2a219e4.png)
+
+### FZ-5
+Identifikator | FZ-5
+-|-
+Zahtjev | Sustav će omogućiti promjenu statusa predanog zahtjeva
+Obrazloženje | Svaki korisnik kojemu je dodijeljena uloga menadžer ima mogućnost pregleda svih zahtjeva koji se trenutno nalaze u sustavu. S obzirom na veće ovlasti, sustav mu dozvoljava upravljanje zahtjevima, odnosno promjenu njihovih statusa prema prethodno donesenoj odluci. Pritiskom na gumb, menadžeru se nude dvije opcije u koje može promijeniti status. On može postati "Odobren" ili "Odbijen". Menadžer će odobriti zahtjev za odsustvo ukoliko je to moguće prema trenutnim obvezama i opterećenjima tvrtke, u protivnom će ga odbiti. Iznimka u kojoj će status uvijek biti odobren odsustvo je zaposlenika iz zdravstvenih razloga, odnosno bolovanje. Menadžer u tom slučaju nema utjecaj na konačnu odluku. Na ovaj način menadžerima se omogućava jednostavnije upravljanje i donošenje odluka u vezi zahtjeva, a zaposlenicima se efikasnije pružaju informacije o njemu.
+Način provjere | Nakon što menadžer otvori pojedini zahtjev koji je pohranjen u sustav, prikazuju mu se sve informacije koje on sadrži. Nakon pregleda zahtjeva mora moći odabrati jednu od dvije opcije, odobravanje ili odbijanje zahtjeva. Nakon odabira jedne od opcija, promjene u statusu zahtjeva moraju se zabilježiti u sustavu. Promjena statusa mora ostati trajno zabilježena u sustavu.
+Prioritet [1-5] | 1
+Izvor/Porijeko | Nastavnici na kolegiju
+
+![Screenshot_10](https://user-images.githubusercontent.com/126589819/226182178-56d63654-c853-42b2-ba07-998153d376ca.png)
+
+### FZ-6
+Identifikator | FZ-6
+-|-
+Zahtjev | Sustav će omogućiti slanje obavijesti korisniku o promjeni statusa zahtjeva
+Obrazloženje | Prilikom promjene statusa zahtjeva u sustavu, novi status trajno se bilježi. Do promjene statusa nekog zahtjeva može eventualno doći zbog promjene odluke menadžera iz opravdanog razloga. On ima mogućnost ponovno izmjeniti sve postojeće zahtjeve, bez obzira na njihov trenutni status. Nakon promjene sustav u obliku e-maila obavještava korisnika o promjeni statusa. Ovakav način obavještavanja omogućuje korisniku primanje obavijesti odmah nakon što je promjena učinjena. On ne mora dodatno gubiti vrijeme provjeravajući status zahtjeva, već će znati točno kada je on promijenjen. Koristeći mogućnost slanja obavijesti u sustavu, menadžer tima pritiskom na gumb šalje obavijest korisniku kako je status njegovog zahtjeva izmijenjen. Menadžer ima mogućnost odabira zaposlenika kojima će se poslati obavijest, a postoji i dodatna značajka koja omogućava označavanje svih zahtjeva koji su do tog trenutka obrađeni te zatim slanja obavijesti korisnicima koji su ih kreirali.
+Način provjere | Nakon promjene statusa zahtjeva, sustav mora omogućiti generiranje obavijesti kojom obznanjuje korisnika o promjeni statusa zahtjeva. Obavijest koja se šalje mora pristići na službeni e-mail svakog zaposlenika koji je on koristio prilikom prijave u sustav.
+Prioritet [1-5] | 1
+Izvor/Porijeko | Nastavnici na kolegiju
+
+![Screenshot_12](https://user-images.githubusercontent.com/126589819/226182307-5ae6ec00-668f-4dc4-aa41-99a504aec639.png)
+
+### FZ-7
+Identifikator | FZ-7
+-|-
+Zahtjev | Sustav će omogućiti prikaz statistike o broju predanih zahtjeva u odnosu na vremensko razdoblje
+Obrazloženje | Prateći vremenska razdoblja predaje zahtjeva u sustav, njihovu količinu te vremena koja su zaposlenici naveli kao vremena odsustva, moguće je izraditi statističke podatke. Menadžer pritiskom na gumb ima mogućnost izrade statistike za neke obrađene zahtjeve. Nakon što se pripradna statistika otvori, menadžer ima opciju sortiranja stupaca po raznim kriterijima, kao što su npr. sortiranje po statusu zahtjeve ili po vremenu kreiranja zahtjeva. Važno je naglasiti da pristup statistici i analizi ima samo korisnička uloga _menadžer_. Menadžeri po potrebi mogu koristiti dobivenu statistiku kako bi došli do važnih informacija za tvrtku. Analizom tih podataka moguće je utvrditi određene trendove i organizirati rad u tvrtki na bolji način. Na primjer, povećani broj predanih zahtjeva u ljetnim mjesecima naznačuje da većina zaposlenika želi iskoristiti svoj godišnji odmor u tom razdoblju. Tada je odmah jasno da se obujam poslova u tom vremenskom periodu mora smanjiti, ili u protivnom, ne moraju se svi zahtjevi za godišnjim odmorom odobriti. Ti podaci pomažu pri dogovaranju projekata, jer tvrtka može odrediti koliko poslova će se u tome razdoblju obavljati s obzirom na dostupnost ljudskih resursa.
+Način provjere | Sustav na temelju svih predanih zahtjeva omogućuje prikaz statističkih podataka. Podaci moraju biti prikazani na način da se u obzir uzimaju broj predanih zahtjeva, vrijeme kada je zahtjev predan te navedeno vrijeme za odsustvo zaposlenika.
+Prioritet [1-5] | 4
+Izvor/Porijeko | Nastavnici na kolegiju
+
+![Screenshot_13](https://user-images.githubusercontent.com/126589819/226182339-73147468-efeb-406c-ac9f-d969548b5bb1.png)
+
+### FZ-8
+Identifikator | FZ-8
+-|-
+Zahtjev | Sustav će omogućiti izradu izvještaja o predanim zahtjevima
+Obrazloženje | Nakon što menadžer obradi sve zahtjeve koji trenutno imaju status "Zaprimljen", potrebno je izraditi izvještaj koji će sadržati informacije o tome koji zahtjevi su odobreni a koji odbijeni. Svi gotovi zahtjevi proslijeđuju se odjelu za ljudske resurse. Podaci o korisnicima dobiveni iz sustava u HR odjelu se koriste za vođenje evidencije. Vođenje ispravne i točne evidencije ključno je za izvršavanje svih zadataka i projekata na vrijeme. HR odjelu je poznato koji zaposlenici su u nekom trenutku dostupni a koji nisu, te je iz tog razloga moguće planiranje i raspodjela obaveza. Slanje izvješća čini komunikaciju između menadžera i odjela ljudskih resursa jasnom i jednostavnom, jer u izvješću je jasno vidljivo koji zaposlenik i u kojem vremenskom razdoblju će biti odsutan s radnog mjesta. Na temelju toga moguće je efikasnije planiranje ljudskih resursa koji će biti dostupni za rad u nekom trenutku. Uz to, izvještaji o odsutnosti radnika mogu daljnje poboljšati kvalitetu organizacije i raspodjelu zadataka unutar tvrtke.
+Način provjere | Na temelju obrađenih zahtjeva, sustav mora omogućiti korisniku u ulozi manager opciju izrade izvještaja. Izvještaj mora sadržavati podatke o svim obrađenim zahtjevima u nekom periodu. U izvještaju moraju pisati ime i prezime zaposlenika koji je podnio zahtjev, vrijeme kada ga je podnio, razlog odsustva, planirano vrijeme odsustva te konačni status zahtjeva.
+Prioritet [1-5] | 1
+Izvor/Porijeko | Nastavnici na kolegiju
+
+![Screenshot_14](https://user-images.githubusercontent.com/126589819/226182365-f6ef1619-7cc6-4bc9-90ef-4773553592e1.png)
+
+### 3.1 Dinamika realizacije zahtjeva
+Svaki funkcionalni zahtjev s oznakom prioriteta 1 realizirati će se u inicijalnoj verziji, dok će ostale funkcionalnosti biti dostupne u budućim verzijama softvera. Za sve funkcionalne zahtjeve s oznakom prioriteta 1, smatra se kako su oni ključni za pravilno izvršavanje osnovnih zadataka koje softver mora ponuditi. Funkcionalni zahtjevi s ostalim oznakama prioriteta nisu od tolike važnosti za rad sustava te se iz tog razloga očekuje kako će te funkcionalnosti biti dostupne u novim ažuriranjima. Važno je odvojiti zahtjeve koji su važniji i realizirati ih na kvalitetniji način kako bi naručitelj softvera bio u stanju obavljati zadatke za koje je on predviđen odmah u početnoj verziji. Nakon realizacije svih ključnih zahtjeva, fokus se može prebaciti na optimizaciju i poboljšanje korisničkog iskustva dodavanjem novih mogućnosti.
+
+## 4. Nefunkcionalni zahtjevi
+### 4.1 Izgled softvera
+**NFZ-1**: Sve funkcionalnosti sustava biti će dostupne kroz grafičko sučelje. 
+
+Pristup svim funkcionalnostima koje sustav nudi biti će moguć putem grafičkog sučelja. Prijavom u sustav, te pritistcima na pojedine gumbove, korisnicima će se otvarati određene forme, izvještaji te sučelje na kojima će mu biti dostupne sve mogućnosti sustava. Važno je napomenuti da korisnik ima pristup samo onim mogućnostima koje su definirane za njegovu korisničku ulogu.
+#### 4.1.1 Metrika za NFZ-1
+Metrika za odabrani nefunkcionalni zahtjev je ocjena korisnika na ljestvici od 1 do 5. Ocjena 5 označava da je korisnik iznimno zadovoljan radom softvera da mu omogućava izvršenje svih željenih zadataka. Ocjena 1 označava da korisnik nije uspio obaviti niti osnove zadatke te je potrebno redizajnirati sustav.
+
+### 4.2 Upotrebljivost softvera
+**NFZ-2**: Sustav sadrži mehanizme koji korisniku ne dozvoljavaju unos pogrešnih vrijednosti.
+
+Korisnici u određena polja prilikom popunjavanja zahtjeva mogu unijeti samo one vrijednosti koje sustav smatra prihvatljivim. Na primjer, u polje za unos datuma prilikom kreiranja zahtjeva, sustav neće pohraniti zahtjev ukoliko se u tome polju ne nalazi upravo datum. 
+
+#### 4.2.1 Metrika za NFZ-2
+Metrika za ovaj nefunkcionalni zahtjev je vrijeme koje je potrebno korisnicima kako bi pravilno naučili koristiti sustav. Smatra se kako će korisnik s vremenom, odnosno s više vremena provedeno u sustavu, bolje savladati njegov način rada te koristiti na ispravan način sve njegove funkcionalnosti.
+
+
+## 5. Skice zaslona i Wireframe
+### 5.1 Wireframe sučelja za korisnike u ulozi _zaposlenik_ i _menadžer_ nakon prijave
+
+![Screenshot_4](https://user-images.githubusercontent.com/126589819/226681289-e2a8fcba-b4a4-469f-a666-c379f496eb96.png)
+
+### 5.2 Wireframe za prikaz mogućnosti korisnika u ulozi _zaposlenik_
+
+![Screenshot_8](https://user-images.githubusercontent.com/126589819/226684887-4d7ce0e3-0956-42f8-973e-3a7a7ab358c7.png)
+
+### 5.3 Wireframe za prikaz mogućnosti korisnika u ulozi _menadžer_
+
+![Screenshot_12](https://user-images.githubusercontent.com/126589819/226687328-02eebb68-d567-47f3-94a5-da4b86686e36.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
